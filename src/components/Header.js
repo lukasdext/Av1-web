@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './Header.css';
 import Logo  from '../assets/logo.png'
 
@@ -23,7 +24,8 @@ const Header = () => {
                 <h2>Flash Cards</h2>
             </span>
 
-            <a href={URL[0]}> {URL[1]} </a>
+            {/* <a href={URL[0]}> {URL[1]} </a> */}
+            
         </div>
     )
 }

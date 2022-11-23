@@ -3,7 +3,7 @@ import Flashcard from './Flashcard'
 
 const FlashcardList = ({ flashcards }) => {
     console.log(flashcards)
-    // console.log(flashcards.push(0, 11));
+    let num = 0;
 
     function array_chunk(arr, len) {
         let chunks = [], i = 0, n = arr.length
@@ -13,17 +13,11 @@ const FlashcardList = ({ flashcards }) => {
         return chunks
     }
     
-
-    console.log(array_chunk(flashcards, 6));
     let pageFlashCards = array_chunk(flashcards, 6);
-    for(let i = 0; i < pageFlashCards.length - 1; i++){
-        console.log("AAA")
-    }
-    console.log(flashcards)
     return (
         <div className="card-grid">
             {flashcards.map(flashcard => {
-                return <Flashcard flashcard={flashcard} key={flashcard.id} />
+                return <Flashcard flashcard={flashcard} key={flashcard.id} onClick={() =>{num = num+1; console.log(num);}} />
             })}
         </div>
     )

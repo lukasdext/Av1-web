@@ -4,9 +4,13 @@ import Header from './components/Header';
 import Dashboard from './pages/dashboard';
 import Home from './pages/home';
 
+import { RankingProvider } from "./contexts/ranking";
+
+
 function App() {
   return (
     <>
+    <RankingProvider>
       <Header/>
       <BrowserRouter>
         <Routes>
@@ -15,6 +19,7 @@ function App() {
           <Route path={"/"} element={<Navigate to={"/home"} />} />
         </Routes>
       </BrowserRouter>
+    </RankingProvider>
     </>
     
   );

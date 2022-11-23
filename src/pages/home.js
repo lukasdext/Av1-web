@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import Timer from '../components/Timer';
 import FlashcardList from '../components/FlashcardList';
 
 function Home() {
   return (
     <>
+        <Timer />
+        <Link to={"../dashboard"} className="link">
+            Ir para Dashboard
+          </Link>
         <FlashcardList className="card-grid" flashcards={SAMPLE_CARDS} />
     </>
     
